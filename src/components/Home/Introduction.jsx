@@ -52,7 +52,7 @@ const bounce = keyframes`
 // `;
 
 const Blob = styled.span`
-  padding: 0.5em;
+  padding: 0.8em;
   background-image: url(/img/blob.svg);
   background-repeat: no-repeat;
   background-position: center;
