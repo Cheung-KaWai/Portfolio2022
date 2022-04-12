@@ -1,14 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
     <Navbar>
       <Menu>
-        <MenuItem>Logo</MenuItem>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Learning Hub</MenuItem>
+        <MenuItem>
+          <Link to="/">Logo</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/">Home</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/#about">About</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/learninghub">Learning Hub</Link>
+        </MenuItem>
       </Menu>
     </Navbar>
   );

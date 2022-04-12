@@ -1,12 +1,7 @@
-import Wrapper from "./components/Layout/Wrapper";
-import Nav from "./components/Navigation/Nav";
+import Routing from "./components/Routing/Routing";
 
 function App() {
-  return (
-    <Wrapper>
-      <Nav></Nav>
-    </Wrapper>
-  );
+  return <Routing />;
 }
 
 export default App;
