@@ -31,3 +31,9 @@ a {
   display: inline-block;
   color: #343a40;
 }
+
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  border: none;
+}

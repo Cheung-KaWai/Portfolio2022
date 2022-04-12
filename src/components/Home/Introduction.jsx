@@ -2,21 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 import { colors } from "../../utils/colors";
+import { margins } from "../../utils/margin";
 import { sizes } from "../../utils/sizes";
 
 export default function Introduction() {
   return (
     <Intro>
       Hi, my name is Ka Wai cheung.
-      <br /> I'm a student <br /> <Highlight>Web & Mobile </Highlight>
-      development <Blob>:D</Blob>
+      <IntroLowerFont>
+        <br /> I'm a student <br /> Web & Mobile development <Blob>:D</Blob>
+      </IntroLowerFont>
     </Intro>
   );
 }
 
 const Intro = styled.h1`
-  font-family: "Grape Nuts", cursive, sans-serif;
+  font-family: "Gloria Hallelujah", cursive;
   font-size: ${sizes.h1};
+  margin-bottom: ${margins.large};
+  line-height: 1.2;
+`;
+
+const IntroLowerFont = styled.span`
+  font-size: ${sizes.h2};
 `;
 
 const slide = keyframes`
@@ -36,6 +44,7 @@ const bounce = keyframes`
 
 const Highlight = styled.span`
   background: linear-gradient(-60deg, #fff 50%, ${colors.lightGreen} 50% 100%);
+  border-radius: 5px;
   background-size: 160% 200%;
   animation: ${slide};
   animation-timing-function: ease-in;
@@ -52,7 +61,6 @@ const Blob = styled.span`
   background-size: 0% 0%;
   animation: ${bounce};
   animation-timing-function: ease-out;
-  animation-delay: 1s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 `;
