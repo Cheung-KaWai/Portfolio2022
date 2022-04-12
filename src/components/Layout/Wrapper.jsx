@@ -9,11 +9,14 @@ export default function Wrapper({ children }) {
 const WrapperContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 2rem;
 
   @media ${device.tablet} {
     margin: 0 10vw;
+    padding: 0;
   }
   @media ${device.laptop} {
     margin: 0 15vw;
+    padding: 0;
   }
 `;

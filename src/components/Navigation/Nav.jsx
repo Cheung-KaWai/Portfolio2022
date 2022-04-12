@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { margins } from "../../utils/margin";
 
 export default function Nav() {
   return (
@@ -24,20 +25,20 @@ export default function Nav() {
 }
 
 const Navbar = styled.nav`
-  height: 7rem;
+  height: 8rem;
+  margin-bottom: ${margins.small};
 `;
 
 const Menu = styled.ul`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   height: 100%;
 `;
 
 const MenuItem = styled.li`
   list-style: none;
   font-size: 1.8rem;
-  padding: 0 2rem;
 
   &:first-child {
     margin-right: auto;
