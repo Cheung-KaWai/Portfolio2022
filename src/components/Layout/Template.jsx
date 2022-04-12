@@ -6,7 +6,7 @@ export default function Template({ children }) {
   return (
     <Wrapper>
       <Nav />
-      <main>{children}</main>
+      {children}
     </Wrapper>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
-import { colors } from "../../utils/colors";
 import { margins } from "../../utils/margin";
 import { sizes } from "../../utils/sizes";
 
@@ -27,10 +26,10 @@ const IntroLowerFont = styled.span`
   font-size: ${sizes.h2};
 `;
 
-const slide = keyframes`
-  0%{background-position:right}
-  100%{background-position: left}
-`;
+// const slide = keyframes`
+//   0%{background-position:right}
+//   100%{background-position: left}
+// `;
 
 const bounce = keyframes`
   0%{background-size:0% 0%}
@@ -42,15 +41,15 @@ const bounce = keyframes`
   100%{background-size: 100% 100%}
 `;
 
-const Highlight = styled.span`
-  background: linear-gradient(-60deg, #fff 50%, ${colors.lightGreen} 50% 100%);
-  border-radius: 5px;
-  background-size: 160% 200%;
-  animation: ${slide};
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-`;
+// const Highlight = styled.span`
+//   background: linear-gradient(-60deg, #fff 50%, ${colors.lightGreen} 50% 100%);
+//   border-radius: 5px;
+//   background-size: 160% 200%;
+//   animation: ${slide};
+//   animation-timing-function: ease-in;
+//   animation-duration: 1s;
+//   animation-fill-mode: forwards;
+// `;
 
 const Blob = styled.span`
   padding: 0.5em;

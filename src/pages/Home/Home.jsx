@@ -4,12 +4,17 @@ import Intro from "../../components/Home/Introduction";
 import Button from "../../components/UI/Button";
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
+import Banner from "../../components/Home/Banner";
 
 export default function Home() {
   return (
     <Template>
-      <Intro />
-      <GreenButton text="See Projects" />
+      <Banner>
+        <div>
+          <Intro />
+          <GreenButton text="See Projects" />
+        </div>
+      </Banner>
     </Template>
   );
 }
