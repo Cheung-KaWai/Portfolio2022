@@ -1,17 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../utils/colors";
+import Shape from "../UI/Shape";
+import { keyframes } from "styled-components";
 
 export default function Banner({ children }) {
   return (
     <BannerContainer>
       {children}
-      <Shape>
-        <ion-icon name="logo-html5"></ion-icon>
-        <ion-icon name="logo-css3"></ion-icon>
-        <ion-icon name="logo-react"></ion-icon>
-        <ion-icon name="logo-javascript"></ion-icon>
-      </Shape>
+      <LanguagesContainer>
+        <Shape background="#fff0f6" color="#f783ac">
+          <ion-icon name="logo-html5"></ion-icon>
+        </Shape>
+        <Shape background="#f3f0ff" color="#9775fa">
+          <ion-icon name="logo-css3"></ion-icon>
+        </Shape>
+        <Shape background="#e3fafc" color="#3bc9db">
+          <ion-icon name="logo-react"></ion-icon>
+        </Shape>
+        <Shape background="#fff9db" color="#ffd43b">
+          <ion-icon name="logo-javascript"></ion-icon>
+        </Shape>
+      </LanguagesContainer>
     </BannerContainer>
   );
 }
@@ -23,16 +32,24 @@ const BannerContainer = styled.header`
   height: calc(100vh - 10rem);
 `;
 
-const Shape = styled.div`
-  right: 0;
-  z-index: -5;
-  background-color: ${colors.lightIndigo};
-  width: 30rem;
-  height: 30rem;
+const orbit = keyframes`
+  100%{
+    transform: rotate(1turn);
+  }
+`;
+
+const LanguagesContainer = styled.div`
   flex-shrink: 0;
-  border-radius: 41% 59% 20% 80% / 49% 67% 33% 51%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 40rem;
+  height: 40rem;
+  animation: ${orbit} 40s linear infinite;
+  transform-origin: center;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 `;
