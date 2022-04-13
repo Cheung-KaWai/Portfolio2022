@@ -14,11 +14,11 @@ export default function Languages() {
       <Shape background="#f3f0ff" color="#9775fa">
         <ion-icon name="logo-css3"></ion-icon>
       </Shape>
-      <Shape background="#e3fafc" color="#3bc9db">
-        <ion-icon name="logo-react"></ion-icon>
-      </Shape>
       <Shape background="#fff9db" color="#ffd43b">
         <ion-icon name="logo-javascript"></ion-icon>
+      </Shape>
+      <Shape background="#e3fafc" color="#3bc9db">
+        <ion-icon name="logo-react"></ion-icon>
       </Shape>
     </LanguagesContainer>
   );
@@ -36,8 +36,8 @@ const LanguagesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40rem;
-  height: 40rem;
+  width: 37rem;
+  height: 37rem;
   animation: ${orbit} 40s linear infinite;
   transform-origin: center;
 
@@ -46,11 +46,12 @@ const LanguagesContainer = styled.div`
   }
 
   @media ${maxDevice.laptopL} {
+    flex-shrink: 1;
     animation: none;
     width: 100%;
     height: auto;
     justify-content: flex-start;
-    gap: 5rem;
+    gap: 3rem;
     margin-bottom: ${margins.small};
   }
 `;

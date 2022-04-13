@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+import { maxDevice } from "../../utils/device";
 import { margins } from "../../utils/margin";
 import { sizes } from "../../utils/sizes";
 
@@ -20,10 +21,23 @@ const Intro = styled.h1`
   font-size: ${sizes.h1};
   line-height: 1.2;
   margin-bottom: ${margins.large};
+  @media ${maxDevice.laptop} {
+    font-size: ${sizes.h1sm};
+    margin-bottom: ${margins.medium};
+  }
+  @media ${maxDevice.mobileL} {
+    font-size: ${sizes.h1xsm};
+  }
 `;
 
 const IntroLowerFont = styled.span`
   font-size: ${sizes.h2};
+  @media ${maxDevice.laptop} {
+    font-size: ${sizes.h2sm};
+  }
+  @media ${maxDevice.mobileL} {
+    font-size: ${sizes.h2xsm};
+  }
 `;
 
 const bounce = keyframes`

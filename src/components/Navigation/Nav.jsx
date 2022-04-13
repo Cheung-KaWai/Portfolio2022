@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { margins } from "../../utils/margin";
+import { maxDevice } from "../../utils/device";
 
 export default function Nav() {
   return (
@@ -27,6 +28,9 @@ export default function Nav() {
 const Navbar = styled.nav`
   height: 8rem;
   margin-bottom: ${margins.small};
+  @media ${maxDevice.mobileL} {
+    display: none;
+  }
 `;
 
 const Menu = styled.ul`

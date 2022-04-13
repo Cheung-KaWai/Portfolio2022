@@ -89,4 +89,13 @@ const Blob = styled.div`
     bottom: unset !important;
     animation: ${jump} 1s ease-out infinite alternate;
   }
+
+  @media ${maxDevice.laptop} {
+    width: 6rem;
+    height: 6rem;
+  }
+  @media ${maxDevice.mobileL} {
+    width: 4rem;
+    height: 4rem;
+  }
 `;

@@ -5,6 +5,7 @@ import Languages from "./Languages";
 import { colors } from "../../utils/colors";
 import Button from "../UI/Button";
 import { maxDevice } from "../../utils/device";
+import { sizes } from "../../utils/sizes";
 
 export default function Banner({ children }) {
   return (
@@ -48,6 +49,9 @@ const GreenButton = styled(Button)`
     &::after {
       left: 1rem;
     }
+  }
+  @media ${maxDevice.mobileL} {
+    font-size: ${sizes.psm};
   }
 `;
 
