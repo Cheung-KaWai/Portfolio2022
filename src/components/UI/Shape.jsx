@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+import { maxDevice } from "../../utils/device";
 
 export default function Shape({ children, color, background }) {
   const top = Math.floor(Math.random() * (70 - 20) + 20);
@@ -28,6 +29,12 @@ const orbit = keyframes`
 const grow = keyframes`
   100%{
     transform: scale(1.2);
+  }
+`;
+
+const jump = keyframes`
+  100%{
+    transform: translateY(-5rem);
   }
 `;
 
@@ -71,5 +78,15 @@ const Blob = styled.div`
     & * {
       animation: ${orbit} 40s linear reverse infinite;
     }
+  }
+
+  @media ${maxDevice.laptopL} {
+    position: relative;
+    animation-play-state: paused;
+    left: unset !important;
+    top: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    animation: ${jump} 1s ease-out infinite alternate;
   }
 `;

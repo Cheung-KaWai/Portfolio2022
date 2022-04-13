@@ -18,8 +18,8 @@ export default function Introduction() {
 const Intro = styled.h1`
   font-family: "Gloria Hallelujah", cursive;
   font-size: ${sizes.h1};
-  margin-bottom: ${margins.large};
   line-height: 1.2;
+  margin-bottom: ${margins.large};
 `;
 
 const IntroLowerFont = styled.span`
